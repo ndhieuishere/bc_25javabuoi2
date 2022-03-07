@@ -9,12 +9,17 @@
 //  */
 
 document.getElementById("btnKetQuaBai1").onclick = function () {
-  var soNgay = document.getElementById("txtNgaylam").value*1;
+  var soNgay = document.getElementById("txtNgaylam").value * 1;
   var luongNgayLam = 100000;
   var ketQua = soNgay * luongNgayLam;
   var luongNhanDuoc = "Luong Nhan Duoc La" + ketQua;
   console.log(luongNhanDuoc);
-  document.getElementById("ketQuaBai1").innerHTML= luongNhanDuoc;
+  document.getElementById("ketQuaBai1").innerHTML = luongNhanDuoc;
+  // document.getElementById("ketQuaBai1").style.backgroundColor = "red";
+  // document.getElementById("ketQuaBai1").style.fontSize = "30px";
+  // document.getElementById("ketQuaBai1").style.color = "White ";
+  // document.getElementById("ketQuaBai1").style.textAlign = "center";
+  document.getElementById("ketQuaBai1").classList.add("thongbao");
 };
 
 // bài 2
@@ -29,15 +34,16 @@ document.getElementById("btnKetQuaBai1").onclick = function () {
 //  */
 
 document.getElementById("btnKetQuaBai2").onclick = function () {
-  var a = document.getElementById("NumA").value*1;
-  var b = document.getElementById("NumB").value*1;
-  var c = document.getElementById("NumC").value*1;
-  var d = document.getElementById("NumD").value*1;
-  var e = document.getElementById("NumE").value*1;
+  var a = document.getElementById("NumA").value * 1;
+  var b = document.getElementById("NumB").value * 1;
+  var c = document.getElementById("NumC").value * 1;
+  var d = document.getElementById("NumD").value * 1;
+  var e = document.getElementById("NumE").value * 1;
   var giaTriTrungBinh = (a + b + c + d + e) / 5;
   var ketQua = "Day La Ket Qua" + giaTriTrungBinh;
   console.log(ketQua);
-  document.getElementById("ketQuaBai2").innerHTML= ketQua;
+  document.getElementById("ketQuaBai2").innerHTML = ketQua;
+  document.getElementById("ketQuaBai2").classList.add("thongbao");
 };
 
 // bài 3
@@ -52,12 +58,13 @@ document.getElementById("btnKetQuaBai2").onclick = function () {
 //  */
 
 document.getElementById("btnKetQuaBai3").onclick = function () {
-  var USD = document.getElementById("USDNumBer").value*1;
+  var USD = document.getElementById("USDNumBer").value * 1;
   var VND = 23.5;
   var ketQua = USD * VND;
   var quyDoi = "Day la ket qua" + ketQua;
   console.log(quyDoi);
-  document.getElementById("ketQuaBai3").innerHTML= quyDoi;
+  document.getElementById("ketQuaBai3").innerHTML = quyDoi;
+  document.getElementById("ketQuaBai3").classList.add("thongbao");
 };
 
 // bài 4
@@ -73,19 +80,21 @@ document.getElementById("btnKetQuaBai3").onclick = function () {
 //  * Đầu ra: hiển thị kq
 //  */
 document.getElementById("btnKetQuaBai4-S").onclick = function () {
-  var chieuDai = document.getElementById("chieuDai").value*1;
-  var chieuRong = document.getElementById("chieuRong").value*1;
+  var chieuDai = document.getElementById("chieuDai").value * 1;
+  var chieuRong = document.getElementById("chieuRong").value * 1;
   var ketQua = "S=" + chieuDai * chieuRong;
   console.log(ketQua);
-  document.getElementById("S").innerHTML= ketQua;
+  document.getElementById("S").innerHTML = ketQua;
+  document.getElementById("S").classList.add("thongbao");
 };
 
 document.getElementById("btnKetQuaBai4-P").onclick = function () {
   var chieuDai = document.getElementById("chieuDai").value * 1;
   var chieuRong = document.getElementById("chieuRong").value * 1;
-  var chuVi = "P="+(chieuDai + chieuRong) * 2;
+  var chuVi = "P=" + (chieuDai + chieuRong) * 2;
   console.log(chuVi);
-  document.getElementById("P").innerHTML= chuVi;
+  document.getElementById("P").innerHTML = chuVi;
+  document.getElementById("P").classList.add("thongbao");
 };
 
 // bài 5
@@ -98,13 +107,14 @@ document.getElementById("btnKetQuaBai4-P").onclick = function () {
 //  *
 //  * Đầu ra: hiển thị kq
 //  */
- 
-document.getElementById("btnKetQuaBai5").onclick = function(){
-    var so2ChuSo=document.getElementById("txtNumber").value*1;
-    var Number1 = so2ChuSo%10;
-    var Number2 = Math.floor (so2ChuSo % 100 / 10);
-    var Tong2So = Number1+Number2;
-    var ketQua = "day la ket qua" + Tong2So;
-    console.log(ketQua);
-    document.getElementById("ketQuaBai5").innerHTML= ketQua;
-}
+
+document.getElementById("btnKetQuaBai5").onclick = function () {
+  var so2ChuSo = document.getElementById("txtNumber").value * 1;
+  var Number1 = so2ChuSo % 10;
+  var Number2 = Math.floor((so2ChuSo % 100) / 10);
+  var Tong2So = Number1 + Number2;
+  var ketQua = "day la ket qua" + Tong2So;
+  console.log(ketQua);
+  document.getElementById("ketQuaBai5").innerHTML = ketQua;
+  document.getElementById("ketQuaBai5").classList.add("thongbao");
+};
